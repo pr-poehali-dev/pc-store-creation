@@ -38,11 +38,11 @@ const Cart = ({ isOpen, onClose, items, onUpdateCart }: CartProps) => {
       onClick={onClose}
     >
       <div
-        className="fixed right-0 top-0 h-full w-96 bg-white shadow-xl transform transition-transform duration-300"
+        className="fixed right-0 top-0 h-full w-96 bg-gray-800 shadow-xl transform transition-transform duration-300"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-lg font-semibold">Корзина</h2>
+          <h2 className="text-lg font-semibold text-white">Корзина</h2>
           <Button variant="ghost" size="sm" onClick={onClose}>
             <Icon name="X" size={20} />
           </Button>
@@ -50,20 +50,20 @@ const Cart = ({ isOpen, onClose, items, onUpdateCart }: CartProps) => {
 
         <div className="flex-1 overflow-y-auto p-4">
           {items.length === 0 ? (
-            <div className="text-center text-gray-500 mt-8">
+            <div className="text-center text-gray-400 mt-8">
               <Icon
                 name="ShoppingCart"
                 size={48}
                 className="mx-auto mb-4 text-gray-400"
               />
-              <p>Корзина пуста</p>
+              <p className="text-gray-400">Корзина пуста</p>
             </div>
           ) : (
             <div className="space-y-4">
               {items.map((item) => (
                 <div
                   key={item.product.id}
-                  className="flex items-center space-x-3 p-3 border rounded-lg"
+                  className="flex items-center space-x-3 p-3 border border-gray-700 rounded-lg bg-gray-700"
                 >
                   <img
                     src={item.product.image}
@@ -71,7 +71,9 @@ const Cart = ({ isOpen, onClose, items, onUpdateCart }: CartProps) => {
                     className="w-16 h-16 object-cover rounded"
                   />
                   <div className="flex-1">
-                    <h4 className="font-medium text-sm">{item.product.name}</h4>
+                    <h4 className="font-medium text-sm text-white">
+                      {item.product.name}
+                    </h4>
                     <p className="text-red-600 font-semibold">
                       {item.product.price.toLocaleString("ru-RU")} ₽
                     </p>

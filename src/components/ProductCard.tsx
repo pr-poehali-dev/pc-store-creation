@@ -11,9 +11,9 @@ interface ProductCardProps {
 
 const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
   return (
-    <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+    <Card className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-gray-800 border-gray-700">
       <CardHeader className="p-4">
-        <div className="aspect-square relative overflow-hidden rounded-lg bg-gray-50">
+        <div className="aspect-square relative overflow-hidden rounded-lg bg-gray-700">
           <img
             src={product.image}
             alt={product.name}
@@ -34,7 +34,7 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
           </Badge>
         </div>
 
-        <h3 className="font-semibold text-gray-900 mb-2 line-clamp-2">
+        <h3 className="font-semibold text-white mb-2 line-clamp-2">
           {product.name}
         </h3>
 
@@ -54,7 +54,7 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
           </span>
         </div>
 
-        <ul className="text-sm text-gray-600 mb-4 space-y-1">
+        <ul className="text-sm text-gray-300 mb-4 space-y-1">
           {product.specs.slice(0, 3).map((spec, index) => (
             <li key={index} className="flex items-center">
               <Icon
@@ -69,11 +69,11 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
 
         <div className="flex items-center justify-between">
           <div>
-            <div className="text-xl font-bold text-gray-900">
+            <div className="text-xl font-bold text-white">
               {product.price.toLocaleString("ru-RU")} ₽
             </div>
             {product.originalPrice && (
-              <div className="text-sm text-gray-500 line-through">
+              <div className="text-sm text-gray-400 line-through">
                 {product.originalPrice.toLocaleString("ru-RU")} ₽
               </div>
             )}

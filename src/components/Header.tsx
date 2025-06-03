@@ -15,33 +15,33 @@ const Header = ({ cartItemsCount, cartItems, onUpdateCart }: HeaderProps) => {
 
   return (
     <>
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <header className="bg-gray-800 border-b border-gray-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
-              <h1 className="text-2xl font-bold text-gray-900">AVANGARD PC</h1>
+              <h1 className="text-2xl font-bold text-white">AVANGARD PC</h1>
               <nav className="hidden md:flex space-x-6">
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Процессоры
                 </a>
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Видеокарты
                 </a>
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Материнские платы
                 </a>
                 <a
                   href="#"
-                  className="text-gray-600 hover:text-gray-900 transition-colors"
+                  className="text-gray-300 hover:text-white transition-colors"
                 >
                   Память
                 </a>

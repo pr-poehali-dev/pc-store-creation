@@ -13,7 +13,7 @@ const CategoryFilter = ({
 }: CategoryFilterProps) => {
   return (
     <div className="mb-8">
-      <h3 className="text-lg font-semibold mb-4 text-gray-900">Категории</h3>
+      <h3 className="text-lg font-semibold mb-4 text-white">Категории</h3>
       <div className="flex flex-wrap gap-2">
         <Button
           variant={selectedCategory === "all" ? "default" : "outline"}
