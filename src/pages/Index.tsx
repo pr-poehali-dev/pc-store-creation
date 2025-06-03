@@ -28,13 +28,29 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      <Header
-        cartItemsCount={cartItemsCount}
-        cartItems={cartItems}
-        onUpdateCart={setCartItems}
+    <div className="min-h-screen bg-gray-900 relative">
+      {/* Фоновое изображение */}
+      <div
+        className="fixed inset-0 z-0 opacity-20"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1920)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       />
-      <ProductCatalog onAddToCart={addToCart} />
+      {/* Темный оверлей */}
+      <div className="fixed inset-0 z-0 bg-gray-900/80" />
+
+      <div className="relative z-10">
+        <Header
+          cartItemsCount={cartItemsCount}
+          cartItems={cartItems}
+          onUpdateCart={setCartItems}
+        />
+        <ProductCatalog onAddToCart={addToCart} />
+      </div>
     </div>
   );
 };

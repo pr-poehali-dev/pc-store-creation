@@ -9,6 +9,8 @@ export interface Product {
   inStock: boolean;
   rating: number;
   reviewCount: number;
+  type?: "component" | "gaming-pc"; // Новый тип для разделения комплектующих и готовых ПК
+  performance?: "entry" | "mid" | "high" | "premium"; // Уровень производительности для игровых ПК
 }
 
 export interface CartItem {
