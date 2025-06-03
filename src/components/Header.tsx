@@ -58,7 +58,7 @@ const Header = ({ cartItemsCount, cartItems, onUpdateCart }: HeaderProps) => {
                 <Icon name="ShoppingCart" size={16} />
                 Корзина
                 {cartItemsCount > 0 && (
-                  <Badge className="ml-2 bg-purple-500 text-white">
+                  <Badge className="ml-2 bg-red-500 text-white">
                     {cartItemsCount}
                   </Badge>
                 )}

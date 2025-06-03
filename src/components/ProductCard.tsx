@@ -82,7 +82,7 @@ const ProductCard = ({ product, onAddToCart }: ProductCardProps) => {
           <Button
             onClick={() => onAddToCart(product)}
             disabled={!product.inStock}
-            className="bg-purple-500 hover:bg-purple-600"
+            className="bg-red-500 hover:bg-red-600"
           >
             <Icon name="ShoppingCart" size={16} />В корзину
           </Button>

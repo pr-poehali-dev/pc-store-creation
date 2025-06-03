@@ -72,7 +72,7 @@ const Cart = ({ isOpen, onClose, items, onUpdateCart }: CartProps) => {
                   />
                   <div className="flex-1">
                     <h4 className="font-medium text-sm">{item.product.name}</h4>
-                    <p className="text-purple-600 font-semibold">
+                    <p className="text-red-600 font-semibold">
                       {item.product.price.toLocaleString("ru-RU")} ₽
                     </p>
                   </div>
@@ -107,11 +107,11 @@ const Cart = ({ isOpen, onClose, items, onUpdateCart }: CartProps) => {
           <div className="border-t p-4">
             <div className="flex justify-between items-center mb-4">
               <span className="text-lg font-semibold">Итого:</span>
-              <span className="text-xl font-bold text-purple-600">
+              <span className="text-xl font-bold text-red-600">
                 {total.toLocaleString("ru-RU")} ₽
               </span>
             </div>
-            <Button className="w-full bg-purple-500 hover:bg-purple-600">
+            <Button className="w-full bg-red-500 hover:bg-red-600">
               Оформить заказ
             </Button>
           </div>
